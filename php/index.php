@@ -8,14 +8,12 @@ exit;
 }
 echo "ini baru bisa bwang mwantap"."<br>" . PHP_EOL;
 echo "Info: " . mysqli_get_host_info($link) ."<br>" . PHP_EOL;
-int count = 0 ;
 $sql = "SELECT * FROM Trucorp.users";
 $result = $link->query($sql);
 if($result->num_rows > 0){
 while($row = $result->fetch_assoc()){
-count++;
+echo "ID: ".$row["id"]. "| Nama : ".$row["Nama"]. " | Kanto : ".$row["Kantor"]."<br>";
 }
-echo "Hasil: ".count;
 }
 else {
 echo "gak ada data bwang";
